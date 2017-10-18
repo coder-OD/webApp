@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="AppController">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Apptitle}}</title>
+    <!--设置视口-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--导航-->
+<navs is-back="true">
+
+</navs>
+<!--中间内容-->
+
+
+<div ng-show="currentType=='home'" ui-view="home"></div>
+<div ng-show="currentType=='author'" ui-view="author"></div>
+<div ng-show="currentType=='content'" ui-view="content"></div>
+<div ng-show="currentType=='my'" ui-view="my"></div>
+
+<!--标签切换-->
+<tabbar></tabbar>
+
+
+<script>
+//    <!-- px:rem = 10:1 -->
+    var fontsize = window.screen.width / 10 +"px";
+console.log(fontsize);
+document.getElementsByTagName("html")[0].style.fontSize = fontsize;
+</script>
+
+
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

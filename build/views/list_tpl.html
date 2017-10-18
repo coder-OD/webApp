@@ -1,0 +1,24 @@
+<div class="content">
+    <div class="list_content" ng-repeat="item in listarray">
+
+        <p class="tag" ng-show="item.column.name.length>=1">{{item.column.name}}</p>
+        <h3>{{item.title}}</h3>
+        <div class="pos1" ng-show="item.display_style=='10001'">
+            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈是哈哈哈哈哈哈</p>
+
+        </div>
+
+        <div class="pos2" ng-show="item.display_style=='10002'">
+            <p>我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容是内容我是内容我是内容我是内容</p>
+            <img ng-src="images/post_1.png" alt="">
+        </div>
+
+        <div class="pos3"  ng-show="item.display_style=='10003'">
+            <ul>
+                <li><img src="images/post_3.png" alt=""></li>
+                <li><img src="images/post_4.png" alt=""></li>
+                <li><img src="images/post_5.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+</div>
